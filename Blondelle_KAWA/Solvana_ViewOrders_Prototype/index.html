@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Solvana Pharma — Supplier Portal</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+ <div class="brand"><div class="brand-symbol">✳</div><div><strong>SOLVANA<span>PHARMA</span></strong><small>SUPPLY CHAIN COMMAND CENTER</small></div></div>
+ <div class="side-caption">WORKSPACE</div>
+ <nav aria-label="Main navigation"><button class="nav-item" data-nav="overview"><span>◫</span> Overview</button><button class="nav-item active" data-nav="orders"><span>▤</span> My orders <b id="sideCount">6</b></button><button class="nav-item" data-nav="shipments"><span>▱</span> Shipments</button></nav>
+ <div class="sidebar-bottom"><div class="side-caption">DEMO CONTROLS</div><button class="nav-item" id="demoAccess"><span>⚿</span> Simulate access denied</button><button class="nav-item" id="demoError"><span>⚠</span> Simulate system error</button><button class="nav-item" id="demoEmpty"><span>○</span> Simulate empty list</button><button class="nav-item" id="demoReset"><span>↺</span> Reset demo</button><div class="support"><span class="support-dot"></span> Prototype mode <small>Simulated data · No backend</small></div></div>
+</aside>
+<div class="main-shell"><header class="topbar"><div class="top-left"><button class="mobile-menu" id="menuButton" aria-label="Open menu">☰</button><span class="crumb">Supplier portal</span><span class="slash">/</span><span id="breadcrumb">My orders</span></div><div class="top-right"><span class="environment">DEMO ENVIRONMENT</span><button class="icon-btn" id="helpButton" aria-label="Help">?</button><div class="avatar">PM</div><div class="account"><strong>PharmaMed Supply</strong><small>Verified supplier</small></div></div></header>
+<main class="content" id="content" aria-live="polite"></main>
+<footer>Solvana Pharma · Supply Chain Command Center <span>Supplier access is restricted to your organization's orders</span></footer></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body></html>

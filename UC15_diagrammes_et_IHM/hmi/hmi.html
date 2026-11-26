@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;font-family:Helvetica,Arial,sans-serif;color:#222;font-size:14px}
+.screen{width:1040px;border:2px solid #444;border-radius:10px;margin:20px;overflow:hidden;background:#fafafa}
+.top{background:#2F5597;color:#fff;padding:10px 18px;display:flex;justify-content:space-between;align-items:center}
+.top b{font-size:16px}.top span{font-size:13px;opacity:.9}
+.crumb{padding:8px 18px;font-size:12px;color:#555;border-bottom:1px solid #ddd;background:#fff}
+.body{padding:16px 18px}
+h2{font-size:17px;margin:0 0 10px}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:13px}
+th,td{border:1px solid #bbb;padding:6px 8px;text-align:left}th{background:#e9eef6}
+td.num{text-align:right}.low{color:#b00020;font-weight:bold}
+.cold{display:inline-block;border:1px solid #2F5597;color:#2F5597;border-radius:4px;font-size:11px;padding:0 4px;margin-left:4px}
+.inp{display:inline-block;border:1.5px solid #666;border-radius:4px;background:#fff;padding:4px 8px;min-width:70px;font-size:13px}
+.inp.err{border-color:#b00020;background:#fff2f4}
+.errmsg{color:#b00020;font-size:12px;margin-top:3px}
+.row{display:flex;gap:28px;margin-top:14px;align-items:flex-start}
+.field label{display:block;font-weight:bold;font-size:13px;margin-bottom:4px}
+.area{border:1.5px solid #666;border-radius:4px;background:#fff;height:62px;width:470px;padding:6px;font-size:13px;color:#444}
+.radio{margin-right:14px}
+.btns{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
+.btn{border:1.5px solid #444;border-radius:5px;padding:7px 16px;background:#fff;font-weight:bold}
+.btn.pri{background:#2F5597;color:#fff;border-color:#2F5597}
+.banner{border:1.5px solid;border-radius:6px;padding:8px 12px;margin-bottom:12px;font-size:13px}
+.warn{border-color:#c47f00;background:#fff6e0}.error{border-color:#b00020;background:#fff2f4}.ok{border-color:#2e7d32;background:#eef7ee}
+.modalwrap{background:#d8d8d8;padding:30px 0;display:flex;justify-content:center}
+.modal{width:620px;background:#fff;border:2px solid #444;border-radius:8px;padding:16px 20px}
+.modal h3{margin:0 0 10px;font-size:16px}
+.kv{display:grid;grid-template-columns:160px 1fr;gap:5px 10px;font-size:13px;margin-top:10px}
+.kv div:nth-child(odd){color:#555}
+.chk{display:inline-block;width:14px;height:14px;border:1.5px solid #444;border-radius:2px;vertical-align:middle;text-align:center;line-height:11px;font-size:12px}
+.note{font-size:12px;color:#555;margin-top:6px}
+.a11y{font-size:11px;color:#666}
+</style></head><body>
+
+<!-- S1 -->
+<div class="screen" id="s1">
+ <div class="top"><b>Supply Chain Command Center</b><span>Pharmacie Saint-Michel – Lyon (FR-LYO-042) · M. Durand, Pharmacist · <u>High contrast</u> · EN ▾</span></div>
+ <div class="crumb">Dashboard › My site stock › <b>Request exceptional replenishment</b></div>
+ <div class="body">
+  <h2>Request exceptional replenishment</h2>
+  <table>
+   <tr><th></th><th>Product</th><th>In stock</th><th>Alert threshold</th><th>Max capacity</th><th>Incoming (date)</th><th>Quantity requested</th></tr>
+   <tr><td><span class="chk">✓</span></td><td>Influenza vaccine 0.5 ml<span class="cold">❄ cold chain</span></td><td class="num low">12</td><td class="num">50</td><td class="num">150</td><td>–</td><td><span class="inp">100</span></td></tr>
+   <tr><td><span class="chk">✓</span></td><td>Amoxicillin 500 mg (x12)</td><td class="num low">40</td><td class="num">100</td><td class="num">400</td><td>60 (22/10)</td><td><span class="inp">200</span></td></tr>
+   <tr><td><span class="chk"></span></td><td>Paracetamol 1 g (x8)</td><td class="num">320</td><td class="num">150</td><td class="num">800</td><td>200 (21/10)</td><td><span class="inp" style="color:#aaa">–</span></td></tr>
+   <tr><td><span class="chk"></span></td><td>Insulin glargine 100 U/ml<span class="cold">❄ cold chain</span></td><td class="num">60</td><td class="num">30</td><td class="num">120</td><td>–</td><td><span class="inp" style="color:#aaa">–</span></td></tr>
+  </table>
+  <div class="note">Red figures = stock under the alert threshold (data from UC 14 – View Site Stock).</div>
+  <div class="row">
+   <div class="field"><label>Urgency *</label><span class="radio">○ Normal</span><span class="radio">● High</span><span class="radio">○ Critical</span></div>
+   <div class="field"><label>Desired delivery date *</label><span class="inp">23/10/2026 📅</span></div>
+  </div>
+  <div class="row"><div class="field"><label>Reason *</label><div class="area">Flu peak since 14/10: vaccine demand x3 this week, local wholesaler out of stock.</div><div class="a11y">No patient personal data (GDPR).</div></div></div>
+  <div class="btns"><span class="btn">Cancel</span><span class="btn pri">Validate</span></div>
+ </div>
+</div>
+
+<!-- S2 -->
+<div class="screen" id="s2">
+ <div class="top"><b>Supply Chain Command Center</b><span>Pharmacie Saint-Michel – Lyon (FR-LYO-042) · M. Durand, Pharmacist</span></div>
+ <div class="crumb">Dashboard › My site stock › <b>Request exceptional replenishment</b></div>
+ <div class="body">
+  <div class="banner error"><b>2 fields need correcting.</b> The faulty fields are highlighted below.</div>
+  <div class="banner warn"><b>Capacity exceeded – Influenza vaccine:</b> 12 in stock + 160 requested = 172 &gt; max capacity 150. A detailed justification is required to continue.</div>
+  <table>
+   <tr><th>Product</th><th>In stock</th><th>Max capacity</th><th>Quantity requested</th></tr>
+   <tr><td>Influenza vaccine 0.5 ml<span class="cold">❄ cold chain</span></td><td class="num">12</td><td class="num">150</td><td><span class="inp" style="border-color:#c47f00;background:#fff6e0">160</span></td></tr>
+   <tr><td>Amoxicillin 500 mg (x12)</td><td class="num">40</td><td class="num">400</td><td><span class="inp err">0</span><div class="errmsg">Quantity must be greater than 0</div></td></tr>
+  </table>
+  <div class="row">
+   <div class="field"><label>Desired delivery date *</label><span class="inp err">15/10/2026 📅</span><div class="errmsg">Date cannot be in the past</div></div>
+  </div>
+  <div class="row"><div class="field"><label>Detailed justification * (capacity exceeded)</label><div class="area" style="border-color:#c47f00">Temporary storage in the second fridge agreed with the site manager (+30 doses).</div></div></div>
+  <div class="btns"><span class="btn">Cancel</span><span class="btn pri">Validate</span></div>
+ </div>
+</div>
+
+<!-- S3 -->
+<div class="screen" id="s3">
+ <div class="top"><b>Supply Chain Command Center</b><span>Pharmacie Saint-Michel – Lyon (FR-LYO-042) · M. Durand, Pharmacist</span></div>
+ <div class="modalwrap"><div class="modal">
+  <h3>Summary of your request</h3>
+  <table>
+   <tr><th>Product</th><th>Quantity</th><th>Transport</th></tr>
+   <tr><td>Influenza vaccine 0.5 ml</td><td class="num">100</td><td><span class="cold">❄ cold chain required</span></td></tr>
+   <tr><td>Amoxicillin 500 mg (x12)</td><td class="num">200</td><td>Standard</td></tr>
+  </table>
+  <div class="kv"><div>Urgency</div><div><b>High</b></div><div>Desired delivery</div><div>23/10/2026</div><div>Reason</div><div>Flu peak since 14/10: vaccine demand x3 this week…</div><div>Sent to</div><div>Regional planner – Auvergne-Rhône-Alpes</div></div>
+  <div class="btns"><span class="btn">Back to edit</span><span class="btn pri">Confirm request</span></div>
+ </div></div>
+</div>
+
+<!-- S4 -->
+<div class="screen" id="s4">
+ <div class="top"><b>Supply Chain Command Center</b><span>Pharmacie Saint-Michel – Lyon (FR-LYO-042) · M. Durand, Pharmacist</span></div>
+ <div class="modalwrap"><div class="modal">
+  <h3>A request is already pending for this product</h3>
+  <div class="kv"><div>Request</div><div><b>REQ-2026-0187</b> · status <b>Pending</b></div><div>Created</div><div>18/10/2026 09:42 by M. Durand</div><div>Line</div><div>Influenza vaccine 0.5 ml – 80 units</div><div>Your new entry</div><div>Influenza vaccine 0.5 ml – 100 units</div></div>
+  <div class="note">Only one pending request per product and site is allowed (BR2). You can update the existing request with your new data, or cancel.</div>
+  <div class="btns"><span class="btn">Cancel</span><span class="btn pri">Update existing request</span></div>
+ </div></div>
+</div>
+
+<!-- S5 -->
+<div class="screen" id="s5">
+ <div class="top"><b>Supply Chain Command Center</b><span>Pharmacie Saint-Michel – Lyon (FR-LYO-042) · M. Durand, Pharmacist</span></div>
+ <div class="crumb">Dashboard › My site stock › <b>Request exceptional replenishment</b></div>
+ <div class="body">
+  <div class="banner ok" style="font-size:15px"><b>✓ Request REQ-2026-0193 sent – status: Pending</b><br>The regional planner (Auvergne-Rhône-Alpes) has been notified. You will receive an alert when the request is approved or rejected.</div>
+  <div class="banner error"><b>Variant E1 – Your request could not be saved.</b> Nothing was recorded and your entries are kept. <u>Retry</u></div>
+  <h2 style="margin-top:14px">My exceptional requests</h2>
+  <table>
+   <tr><th>Request</th><th>Date</th><th>Products</th><th>Urgency</th><th>Status</th></tr>
+   <tr><td>REQ-2026-0193</td><td>19/10/2026</td><td>Influenza vaccine (100), Amoxicillin (200)</td><td>High</td><td><b>Pending</b></td></tr>
+   <tr><td>REQ-2026-0151</td><td>02/10/2026</td><td>Insulin glargine (40)</td><td>Critical</td><td>Approved</td></tr>
+  </table>
+  <div class="btns"><span class="btn">Back to dashboard</span></div>
+ </div>
+</div>
+</body></html>
